@@ -11,18 +11,22 @@ using namespace std;
 
 class KNearestNeighbors{
     public:
-        void fit(int k, void* data, int** label, int nrow, int ncol, bool isInt){
+        void fit(int k, int** data, int** label, int nrow, int ncol){
             this -> k = k;
+            this -> dataI = data;
             this -> label = label;
             this -> nrow = nrow;
             this -> ncol = ncol;
-            this -> isInt = isInt;
+            this -> isInt = true;
+        };
 
-            if(isInt){
-                dataI = static_cast<int**>(data);
-            } else {
-                dataF = static_cast<float**>(data);
-            }
+        void fit(int k, float** data, int** label, int nrow, int ncol){
+            this -> k = k;
+            this -> dataF = data;
+            this -> label = label;
+            this -> nrow = nrow;
+            this -> ncol = ncol;
+            this -> isInt = false;
         };
 
         int* predict(float** arr, int len){
