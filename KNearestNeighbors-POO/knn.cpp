@@ -6,7 +6,8 @@ using namespace std;
 
 int main(){
     //Lendo os dados e os rótulos
-    dataCSVReader feat1("dataset1.csv");
+    dataCSVReader feat1("dataset2.csv");
+    float** features = static_cast<float**>(feat1.get_data());
 
     dataCSVReader lab1("label1.csv");
     int** labels = static_cast<int**>(lab1.get_data());
@@ -31,7 +32,7 @@ int main(){
     KNearestNeighbors knn;
 
     //Método fit
-    knn.fit(3, feat1.get_data(), labels, feat1.get_rows(), feat1.get_columns(), false);
+    knn.fit(3, features, labels, feat1.get_rows(), feat1.get_columns());
 
     //Método predict
     int* teste = knn.predict(arr, nrow);
