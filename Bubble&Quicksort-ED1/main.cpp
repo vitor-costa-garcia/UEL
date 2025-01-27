@@ -40,7 +40,7 @@ int main(){
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> duration = end - start;
 
-    cout << "Tempo: " << duration.count() << endl;
+    cout << "Tempo Quicksort: " << duration.count() << endl;
 
 
 }
