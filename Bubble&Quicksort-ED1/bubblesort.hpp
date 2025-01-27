@@ -6,13 +6,16 @@ using namespace std;
 //Sorts vector comidas by priority in descending order
 void BubbleSortP(vector<Comida> &comidas, int l, int h){
     int counter = 0;
+    bool swap = true;
 
-    for(int i = l; i < h; i++){
+    while(swap){
+        swap = false;
         for(int j = l+1; j < h-counter; j++){
-            if(comidas[j-1].p > comidas[j].p){
+            if(comidas[j-1].p < comidas[j].p){
                 Comida temp = comidas[j];
                 comidas[j] = comidas[j-1];
                 comidas[j-1] = temp;
+                swap = true;
             };
         };
         counter++;
@@ -22,12 +25,16 @@ void BubbleSortP(vector<Comida> &comidas, int l, int h){
 //Sorts vector comidas by time in ascending order
 void BubbleSortT(vector<Comida> &comidas, int l, int h){
     int counter = 0;
-    for(int i = l; i < h; i++){
+    bool swap = true;
+
+    while(swap){
+        swap = false;
         for(int j = l+1; j < h-counter; j++){
             if(comidas[j-1].t > comidas[j].t){
                 Comida temp = comidas[j];
                 comidas[j] = comidas[j-1];
                 comidas[j-1] = temp;
+                swap = true;
             };
         };
         counter++;
