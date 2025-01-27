@@ -3,7 +3,7 @@ prioridade,tempo,nome
 3,5,hamburguer
 2,38,sorvete
 4,34,batata
-2,30,maçã
+2,30,maÃ§Ã£
 3,99,feijao
 4,42,macarrao
 3,35,sorvete
@@ -33,7 +33,7 @@ prioridade,tempo,nome
 5,3,pizza
 1,20,banana
 3,51,batata
-4,73,maçã
+4,73,maÃ§Ã£
 4,18,morango
 6,91,pao
 5,78,feijao
@@ -50,8 +50,8 @@ prioridade,tempo,nome
 2,88,abacaxi
 4,99,frango
 4,2,macarrao
-6,9,maçã
-2,39,maçã
+6,9,maÃ§Ã£
+2,39,maÃ§Ã£
 6,62,pao
 6,20,macarrao
 4,28,banana
@@ -60,7 +60,7 @@ prioridade,tempo,nome
 3,62,feijao
 4,97,pizza
 6,20,queijo
-1,40,maçã
+1,40,maÃ§Ã£
 1,14,queijo
 2,50,queijo
 4,10,pao
@@ -70,17 +70,17 @@ prioridade,tempo,nome
 2,53,batata
 4,42,morango
 2,66,macarrao
-3,90,maçã
+3,90,maÃ§Ã£
 5,22,morango
 6,40,pizza
-2,68,maçã
+2,68,maÃ§Ã£
 2,11,banana
 6,9,banana
 2,45,macarrao
 3,97,feijao
 5,37,abacaxi
 3,73,pizza
-2,73,maçã
+2,73,maÃ§Ã£
 3,71,feijao
 3,94,salada
 6,1,salada
@@ -96,6 +96,6 @@ prioridade,tempo,nome
 2,30,feijao
 6,54,morango
 2,8,abacaxi
-5,39,maçã
+5,39,maÃ§Ã£
 2,34,salada
 4,49,pao
