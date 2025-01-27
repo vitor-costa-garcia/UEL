@@ -3,7 +3,7 @@
 
 using namespace std;
 
-//Sorts vector comidas by priority in descending order
+//Sorts vector comidas by priority in descending order and time in ascending order
 void BubbleSortP(vector<Comida> &comidas, int l, int h){
     int counter = 0;
     bool swap = true;
@@ -11,7 +11,7 @@ void BubbleSortP(vector<Comida> &comidas, int l, int h){
     while(swap){
         swap = false;
         for(int j = l+1; j < h-counter; j++){
-            if(comidas[j-1].p < comidas[j].p){
+            if(comidas[j-1].p < comidas[j].p || (comidas[j-1].p == comidas[j].p && comidas[j-1].t > comidas[j].t)){
                 Comida temp = comidas[j];
                 comidas[j] = comidas[j-1];
                 comidas[j-1] = temp;
@@ -22,35 +22,7 @@ void BubbleSortP(vector<Comida> &comidas, int l, int h){
     };
 };
 
-//Sorts vector comidas by time in ascending order
-void BubbleSortT(vector<Comida> &comidas, int l, int h){
-    int counter = 0;
-    bool swap = true;
-
-    while(swap){
-        swap = false;
-        for(int j = l+1; j < h-counter; j++){
-            if(comidas[j-1].t > comidas[j].t){
-                Comida temp = comidas[j];
-                comidas[j] = comidas[j-1];
-                comidas[j-1] = temp;
-                swap = true;
-            };
-        };
-        counter++;
-    };
-};
-
-//Sort vector comidas by priority in descending order, then sorts again by time in ascending order
+//Calls Bubblesort algorithm
 void BubbleSort(vector<Comida> &comidas){
     BubbleSortP(comidas, 0, comidas.size());
-
-    int sup = 0;
-    for(int i = 1; i < comidas.size(); i++){
-        if(comidas[i-1].p != comidas[i].p){
-            BubbleSortT(comidas, sup, i);
-            sup = i;
-        }
-    }
-    BubbleSortT(comidas, sup, comidas.size());
 };
