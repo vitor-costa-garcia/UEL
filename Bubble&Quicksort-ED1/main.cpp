@@ -1,9 +1,9 @@
 #include <iostream>
 #include <chrono>
 #include <vector>
-#include "read_csv.hpp"
-#include "bubblesort.hpp"
-#include "quicksort.hpp"
+#include "src/utils/read_csv.hpp"
+#include "src/utils/bubblesort.hpp"
+#include "src/utils/quicksort.hpp"
 
 using namespace std;
 using namespace std::literals::chrono_literals;
@@ -11,7 +11,7 @@ using namespace std::literals::chrono_literals;
 int main(){
     //BUBBLESORT ALGORITHM---------------------------------------------------------------------------------
     //Reading comidas csv file
-    vector<Comida> comidas = ReadCSV("restaurante_pratos.csv", ',', true);
+    vector<Comida> comidas = ReadCSV("data/dados_comidas.csv", ',', true);
 
     //Starts timer
     auto start = std::chrono::high_resolution_clock::now();
@@ -26,21 +26,25 @@ int main(){
     //Time taken by BubbleSort algorithm to sort vector comidas;
     cout << "Tempo BubbleSort: " << duration.count() << endl;
 
+    // for (size_t i = 0; i < comidas.size(); i++)
+    // {
+    //     cout << comidas[i].p << "," << comidas[i].t << "," << comidas[i].n << endl;
+    // }
+    
+
     //QUICKSORT ALGORITHM----------------------------------------------------------------------------------
     //Reading comidas csv file again (resets positions)
-    vector<Comida> comidas = ReadCSV("restaurante_pratos.csv", ',', true);
+    comidas = ReadCSV("data/dados_comidas.csv", ',', true);
 
     //Starts timer
-    auto start = std::chrono::high_resolution_clock::now();
+    start = std::chrono::high_resolution_clock::now();
 
     //Sorting comidas vector using QuickSort algorithm -> Time complexity:O(n*logn) - Space complexity:O(1)
     QuickSort(comidas);
 
     //Ends timer
-    auto end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> duration = end - start;
+    end = std::chrono::high_resolution_clock::now();
+    duration = end - start;
 
-    cout << "Tempo Quicksort: " << duration.count() << endl;
-
-
+    cout << "Tempo QuickSort: " << duration.count() << endl;
 }
