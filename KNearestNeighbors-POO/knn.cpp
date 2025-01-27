@@ -1,15 +1,15 @@
 #include <iostream>
-#include "read_csv.h"
-#include "knn.h"
+#include "src/utils/read_csv.h"
+#include "src/utils/knn.h"
 
 using namespace std;
 
 int main(){
     //Lendo os dados e os rótulos
-    dataCSVReader feat1("dataset2.csv");
+    dataCSVReader feat1("data/dataset2.csv");
     float** features = static_cast<float**>(feat1.get_data());
 
-    dataCSVReader lab1("label1.csv");
+    dataCSVReader lab1("data/label1.csv");
     int** labels = static_cast<int**>(lab1.get_data());
 
     //Criando o conjunto de dados de exemplo
