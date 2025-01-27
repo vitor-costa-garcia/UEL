@@ -11,7 +11,7 @@ using namespace std::literals::chrono_literals;
 int main(){
     //BUBBLESORT ALGORITHM---------------------------------------------------------------------------------
     //Reading comidas csv file
-    vector<Comida> comidas = ReadCSV("data/dados_comidas.csv", ',', true);
+    vector<Comida> comidas = ReadCSV("data/restaurante_pratos.csv", ',', true);
 
     //Starts timer
     cout << "Bubblesort em andamento..." << endl;
@@ -37,7 +37,7 @@ int main(){
 
     //QUICKSORT ALGORITHM----------------------------------------------------------------------------------
     //Reading comidas csv file again (resets positions)
-    comidas = ReadCSV("data/dados_comidas.csv", ',', true);
+    comidas = ReadCSV("data/restaurante_pratos.csv", ',', true);
 
     //Starts timer
     cout << "Quicksort em andamento..." << endl;
