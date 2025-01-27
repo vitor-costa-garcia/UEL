@@ -11,7 +11,7 @@ int partitioningP(vector<Comida> &comidas, int l, int h){
     Comida temp;
 
     for(int j = l; j <= h - 1; j++){
-        if(comidas[j].p < pivot.p || (comidas[j].p == pivot.p && comidas[j].t > pivot.t)){
+        if(comidas[j].p > pivot.p || (comidas[j].p == pivot.p && comidas[j].t < pivot.t)){
             i++;
             temp = comidas[i];
             comidas[i] = comidas[j];

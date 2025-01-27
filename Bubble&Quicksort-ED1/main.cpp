@@ -11,7 +11,7 @@ using namespace std::literals::chrono_literals;
 int main(){
     //BUBBLESORT ALGORITHM---------------------------------------------------------------------------------
     //Reading comidas csv file
-    vector<Comida> comidas = ReadCSV("data/restaurante_pratos.csv", ',', true);
+    vector<Comida> comidas = ReadCSV("data/dados_comidas.csv", ',', true);
 
     //Starts timer
     cout << "Bubblesort em andamento..." << endl;
@@ -27,11 +27,17 @@ int main(){
     cout << "Bubblesort finalizado!" << endl;
     //Time taken by BubbleSort algorithm to sort vector comidas;
     cout << "Tempo BubbleSort: " << duration.count() << endl;
+
+    //Results
+    // for (size_t i = 0; i < comidas.size(); i++)
+    // {
+    //     cout << comidas[i].p << "," << comidas[i].t << "," << comidas[i].n << endl;
+    // }
     
 
     //QUICKSORT ALGORITHM----------------------------------------------------------------------------------
     //Reading comidas csv file again (resets positions)
-    comidas = ReadCSV("data/restaurante_pratos.csv", ',', true);
+    comidas = ReadCSV("data/dados_comidas.csv", ',', true);
 
     //Starts timer
     cout << "Quicksort em andamento..." << endl;
@@ -47,4 +53,11 @@ int main(){
     cout << "Quicksort finalizado!" << endl;
     //Time taken by QuickSort algorithm to sort vector comidas;
     cout << "Tempo QuickSort: " << duration.count() << endl;
+
+    //Results
+    // for (size_t i = 0; i < comidas.size(); i++)
+    // {
+    //     cout << comidas[i].p << "," << comidas[i].t << "," << comidas[i].n << endl;
+    // }
+    
 }
