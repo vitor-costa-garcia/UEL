@@ -27,6 +27,12 @@ int main(){
     cout << "Bubblesort finalizado!" << endl;
     //Time taken by BubbleSort algorithm to sort vector comidas;
     cout << "Tempo BubbleSort: " << duration.count() << endl;
+
+    //Results
+    // for (size_t i = 0; i < comidas.size(); i++)
+    // {
+    //     cout << comidas[i].p << "," << comidas[i].t << "," << comidas[i].n << endl;
+    // }
     
 
     //QUICKSORT ALGORITHM----------------------------------------------------------------------------------
@@ -47,4 +53,11 @@ int main(){
     cout << "Quicksort finalizado!" << endl;
     //Time taken by QuickSort algorithm to sort vector comidas;
     cout << "Tempo QuickSort: " << duration.count() << endl;
+
+    //Results
+    // for (size_t i = 0; i < comidas.size(); i++)
+    // {
+    //     cout << comidas[i].p << "," << comidas[i].t << "," << comidas[i].n << endl;
+    // }
+    
 }
